@@ -133,7 +133,7 @@ class App extends StatelessWidget {
                   ),
                 ),
                 Transform.translate(
-                  offset: const Offset(0, -20),
+                  offset: const Offset(0, -40),
                   child: const CurrencyCard(
                     name: 'Dollar',
                     code: 'USD',
