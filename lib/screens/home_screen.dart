@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  void onRestartPressed() {
+  void onResetPressed() {
     timer.cancel();
     setState(() {
       isRunning = false;
@@ -98,12 +98,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Theme.of(context).cardColor,
                   ),
                   IconButton(
-                    onPressed: isRunning ? onRestartPressed : null,
+                    onPressed: isRunning ? onResetPressed : null,
                     icon: isRunning
-                        ? const Icon(Icons.restart_alt_outlined)
+                        ? const Icon(Icons.stop_circle_outlined)
                         : const Icon(null),
                     iconSize: 50,
-                    color: Theme.of(context).cardColor,
+                    color: Theme.of(context).cardColor.withOpacity(0.8),
                   ),
                 ],
               ),
